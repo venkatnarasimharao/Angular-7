@@ -1,0 +1,79 @@
+functions
+-pirticular business logic called as function
+-functions are used to reuse the business logic
+- we have 5 types of functions 
+		named functions
+		anonymous functions/ arrow functions
+		rest parameters in functions
+		default parameters in functions
+		optional parameters in functions
+
+Named functions
+- the function with the name called as named function\
+- we can define function with the help of function keyword
+syntax
+//function definition
+function functionname(arguments with datatype):returntype{
+		//business logic
+};
+//call function
+functionname();
+
+ex1:
+	create the named function with the following name
+		@function_one
+	"fun_one" return following message
+		"data from data base soon..."
+	call the "function one"
+
+ex2
+	create the following named functions
+		@fun_one
+		@fun_two
+
+	"fun_one" return "fun_two" definition
+	"fun_two" return following string
+		"data from data base soon..."
+	call the "fun_one"
+
+ex3 	
+	create the following named functions
+		@fun_one
+		@fun_two
+		@fun_three
+		@fun_four
+	"fun_two" return following message
+		"angular7"
+	"fun_three" return following message
+		"nodejs"
+	"fun_four" return following message
+		"mongodb"
+	-pass "fun_two" , fun_three, fun_four definitions to fun_one as arguments
+
+	the return type of fun_one is "void" 
+	call the fun_one
+
+ex4 
+	push numbers from 1 to 10 in forward order as well as reverse order to array
+	
+	
+ex5
+	push fun_one definition to my_arr upto 5 times
+	
+	fun_one retun folling message 
+		"welcome to named functions"
+	read fun_one from my_arr
+
+ex6
+	create the following named functions 
+		@fun_one
+		@fun_two
+		@fun_three
+	fun_two return following message
+		"mongobd"
+	fun_three return following message
+		"couchdb"
+	create the array with the "fun_two()" and "fun_three()"
+
+	pass array to fun_one as argument.
+	call the fun_one
