@@ -36,7 +36,7 @@ for(var i:number=0;i<my_arr.length;i++){
     document.write( my_arr[i]()+"<br>");
 };
 
-*/
+
 var fun_one=(arg1:any,arg2:any,arg3:any):void=>{
     document.write(arg1+"<br>"+arg2+"<br>"+arg3);
 };
@@ -50,3 +50,19 @@ var fun_four=():string=>{
     return "mongodb";
 };
 fun_one( fun_two(),fun_three(),fun_four());
+*/
+var oracle=():string=>{
+    return "oracle.......................";
+};
+
+var mysqul=():string=>{
+    return "mysqul.......................";
+};
+
+var data:any={
+    oracle:oracle,
+    mysqul:mysqul
+
+};
+
+document.write(data.oracle()+"<br>"+data.mysqul()+"<br>");

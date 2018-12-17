@@ -36,17 +36,29 @@ for(var i:number=0;i<my_arr.length;i++){
     document.write( my_arr[i]()+"<br>");
 };
 
-*/
-var fun_one = function (arg1, arg2, arg3) {
-    document.write(arg1 + "<br>" + arg2 + "<br>" + arg3);
+
+var fun_one=(arg1:any,arg2:any,arg3:any):void=>{
+    document.write(arg1+"<br>"+arg2+"<br>"+arg3);
 };
-var fun_two = function () {
+var fun_two=():string=>{
     return "Angular 7 ...!";
 };
-var fun_three = function () {
+var fun_three=():string=>{
     return "nodejs ...!";
 };
-var fun_four = function () {
+var fun_four=():string=>{
     return "mongodb";
 };
-fun_one(fun_two(), fun_three(), fun_four());
+fun_one( fun_two(),fun_three(),fun_four());
+*/
+var oracle = function () {
+    return "oracle.......................";
+};
+var mysqul = function () {
+    return "mysqul.......................";
+};
+var data = {
+    oracle: oracle,
+    mysqul: mysqul
+};
+document.write(data.oracle() + "<br>" + data.mysqul() + "<br>");
