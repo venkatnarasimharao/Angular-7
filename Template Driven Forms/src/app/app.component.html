@@ -1,0 +1,53 @@
+<div class="container" novalidate>
+  <form #userDetails="ngForm" (ngSubmit)="clickMe(userDetails.value)">
+    <!-- first name -->
+    <div class="from-group">
+        <label for="">First Name</label>
+        <input type="text" name="fname" class="form-control" ngModel>
+    </div>
+    <!-- last name -->
+    <div class="form-group">
+      <label for="">Last Name</label>
+      <input type="text" name="lname" class="form-control" ngModel>
+    </div>
+    <!-- uemail -->
+    <div class="form-group">
+      <label for="">Email</label>
+      <input type="email" name="uemail" id="" class="form-control" ngModel>
+    </div>
+    <!-- sub group -->
+    <div class="form-group" ngModelGroup="addr">
+      <!-- ucity -->
+      <div class="form-group">
+        <label for="">City</label>
+        <input type="text" class="form-control" name="ucity" ngModel>
+      </div>
+      <!-- address lane -->
+      <div class="form-group">
+        <label for="">Address Lane</label>
+        <input type="text" class="form-control" name="uaddress" ngModel>
+      </div>
+    </div>
+    <!-- gender -->
+    <div class="form-group">
+      <input type="radio" class="form-control" name="gender" value="male" ngModel>male
+      <input type="radio" class="form-control" name="gender" value="female" ngModel>Female
+    </div>
+    <!-- country dropdown -->
+    <div class="form-group">
+      <label for="">Country</label>
+      <select name="ucountry" id="" ngModel>
+        <option value="India">India</option>
+        <option value="pakistan">pakistan</option>
+        <option value="usa">USA</option>
+        <option value="uk">London</option>
+        <option value="china">China</option>
+        <option value="canada">Canada</option>
+      </select>
+    </div>
+     <!-- submit button-->
+     <div class="form-group" align="center">
+        <input type="submit" class="btn btn-success">
+      </div>
+  </form>
+</div>
