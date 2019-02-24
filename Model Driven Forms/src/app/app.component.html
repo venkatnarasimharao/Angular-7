@@ -1,0 +1,85 @@
+<!-- container class adjust the content based on screen dimension
+ novalidate attribute used to disable the validation -->
+
+   <!-- where userDetails is the logical name of forms 
+    (ngSubmit) is the predefined directive -->
+<div class="container" novalidate>
+
+ <form [formGroup]="userDetails" (ngSubmit)="register()">
+   <!-- first name -->
+   <div class="form-group">
+      <label>First Name</label>
+      <input type="text" class="form-control" formControlName="fname" required>
+   </div>
+   <!-- required -->
+   <div *ngIf="userDetails.controls['fname'].hasError('required')"
+          class="alert alert-danger">
+      *** can't left the feild blank***
+   </div>
+   <!-- minlength -->
+   <div *ngIf="userDetails.controls['fname'].hasError('minlength')" 
+      class="alert alert-danger">
+       ***minimum 3 characters are required***
+   </div>
+   <!-- maxlength -->
+   <div *ngIf="userDetails.controls['fname'].hasError('maxlength')"
+        class="alert alert-danger">
+        ***max length 6 characters should be given ****
+   </div>
+
+   <!-- Last name -->
+   <div class="form-group">
+    <label>Last Name</label>
+    <input type="text" class="form-control" formControlName="lname">
+   </div>
+
+   <!-- email -->
+   <div class="form-group">
+    <label>Email</label>
+    <input type="email" class="form-control" formControlName="uemail">
+   </div>
+
+   <!-- Sub Group -->
+   <div class="form-group" formGroupName="addr">
+       <!-- city -->
+       <div class="form-group">
+          <label>city</label>
+          <input type="text" class="form-control" formControlName="ucity">
+       </div>
+       <!-- address lane -->
+       <div class="form-group">
+          <label>Address Lane</label>
+          <input type="text" class="form-control" formControlName="uaddress">
+       </div>
+   </div>
+
+   <!-- gender -->
+   <div class="form-group">
+      <input type="radio" class="form-control" value="male" formControlName="gender">Male
+      <input type="radio" class="form-control" value="female" formControlName="gender">female
+    </div>
+
+    <!-- dropdown -->
+    <div class="form-group">
+      <label for="">Country</label>
+      <select name="" id="" class="form-control" formControlName="ucountry">
+        <option value="India">India</option>
+        <option value="pak">pak</option>
+        <option value="usa">usa</option>
+        <option value="austrilia">austrilia</option>
+        <option value="japan">japan</option>
+      </select>
+    </div>
+
+    <!-- submit -->
+    <div class="form-group" align="center">
+        <input type="submit" class="btn btn-success">
+    </div>
+ </form>
+</div>
+
+
+
+
+
+
