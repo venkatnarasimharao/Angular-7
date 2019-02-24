@@ -1,0 +1,9 @@
+<a [routerLink]="['/']" style="margin-left: 20px"><b>page one</b></a>
+<a [routerLink]="['page_two']" style="margin-left:100px;"><b>page two</b></a>
+
+<button (click)='clickMe()' style="margin-left:100px;">page three</button>
+<br><br>
+<router-outlet></router-outlet>
+<!-- router-outlet acts as a placeholder that page loadeds dynamically
+or 
+Acts as a placeholder that Angular dynamically fills based on the current router state -->
