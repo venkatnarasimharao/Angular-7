@@ -1,0 +1,81 @@
+<div class="container">
+  <form [formGroup]="userDetails" novalidate (ngSubmit)="register()">
+    <div class="form-group">
+      <label>User first Name</label>
+      <input type="text" class="form-control" formControlName="Uname" required>
+    </div>
+    <div *ngIf="userDetails.controls['Uname'].hasError('required')" class="alert alert-danger">
+        *** Can't leave empty feild***
+    </div>
+
+    <div *ngIf="userDetails.controls['Uname'].hasError('minlength')" class="alert alert-danger">
+        *** minlenght is 4 ***
+    </div>
+
+    <div *ngIf="userDetails.controls['Uname'].hasError('maxlength')" class="alert alert-danger">
+      *** maxlength is 9 ****
+    </div>
+    
+    <div class="form-group">
+      <label for="">User Last Name</label>
+      <input type="text" class="form-control" formControlName="Lname" required>
+    </div>
+
+    <!-- form validation for last name -->
+    <div *ngIf="userDetails.controls['Lname'].hasError('required')" class="alert alert-danger">
+        *** Can't leave empty feild***
+    </div>
+
+    <div *ngIf="userDetails.controls['Lname'].hasError('minlength')" class="alert alert-danger">
+        *** minlenght is 4 ***
+    </div>
+
+    <div *ngIf="userDetails.controls['Lname'].hasError('maxlength')" class="alert alert-danger">
+      *** maxlength is 9 ****
+    </div>
+    
+     <!-- Email -->
+     <div class="form-group">
+        <label>Email</label>
+        <input type="text" formControlName="email" class="form-control" />
+        <div *ngIf="userDetails.controls.email.errors" class="alert alert-danger">
+            <div *ngIf="userDetails.controls.email.errors.required">Email is required</div>
+            <div *ngIf="userDetails.controls.email.errors.email">Email must be a valid email address</div>
+        </div>
+    </div>
+
+      <div class="form-group" formGroupName="addr">
+        <div class="form-group">
+            <label for="">City</label>
+            <input type="text" class="form-control" formControlName="Ucity" required>
+        </div>
+        <div class="form-group">
+            <label for="">Address Lane</label>
+            <input type="text" class="form-control" formControlName="Uaddress" required>
+        </div>
+
+      </div>
+
+      <!-- Gender -->
+    <div class="form-group">
+        <input type="radio" class="form-control" value="male" formControlName="gender">male
+        <input type="radio" class="form-control" value="female" formControlName="gender">female
+      </div>
+  
+      <!-- DropDown -->
+      <div class="form-group">
+        <label>Country.</label>
+        <select class="form-control" formControlName="ucountry">
+          <option value="india">India</option>
+          <option value="usa">USA</option>
+          <option value="uk">UK</option>
+          <option value="japan">Japan</option>
+        </select>
+      </div>
+  
+      <!-- submit button-->
+      <div class="form-group" align="center">
+        <input type="submit" class="btn btn-success">
+      </div>
+  </form>
+</div>
