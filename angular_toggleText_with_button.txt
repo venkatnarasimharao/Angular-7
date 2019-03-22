@@ -1,0 +1,22 @@
+app.components.ts
+
+export class AppComponent{
+	visible= true;
+	toggleDiv(){
+		this.visible= ! this.visible;
+	}
+}
+
+
+
+app.component.html
+
+<div *ngIf="visible"> 
+
+	This Works
+
+</div>
+
+<button (click)="toggleDiv()">
+	toggle
+</button>
