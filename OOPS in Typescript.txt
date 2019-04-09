@@ -20,6 +20,11 @@ multi level is possibe
 
 
 
+Angular makes use of observables as an interface to handle a variety of common asynchronous operations
+
+
+
+
 Encapsulation - the capability to store related information, whether data or methods, together in an object.
 
 Aggregation - the capability to store one object inside another object.
