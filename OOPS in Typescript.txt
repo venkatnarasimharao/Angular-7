@@ -29,6 +29,12 @@ n object is an instance which contains set of key value pairs. The values can be
 
 
 
+promise is like an asynchronous get operation whereas an observable is like an asynchronous iterable. 
+We could also say that the main difference between a promise and an observable is that a promise emits only a single value, whereas an observable emits multiple values. 
+
+
+
+
 Encapsulation - the capability to store related information, whether data or methods, together in an object.
 
 Aggregation - the capability to store one object inside another object.
