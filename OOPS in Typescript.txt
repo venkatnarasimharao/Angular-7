@@ -1,0 +1,52 @@
+Interface
+only decleration not implementation we will go for interface
+n interface defines public properties and methods of a class. 
+It does not have any private members and must not have any implementations of its members.
+
+interface Person {
+ fullName: string;
+ toString();
+}
+interface Person2 extends Person {
+ fullName: string;
+ toString();
+}
+
+multiple interface is possible 
+but multiple inheritance is not possible in ts (class_name extends class_name2, class_name3)
+
+multi level is possibe
+
+
+
+
+
+
+
+
+Implement polymorphism in TypeScript
+When multiple classes inherit from a parent and override the same functionality, the result is polymorphism
+Example
+class CheckingAccount {
+  open(initialAmount: number) {
+    // code to open account and save in database
+  }
+}
+ 
+class BusinessCheckingAccount extends CheckingAccount {
+  open(initialAmount: number) {
+    if (initialAmount < 1000) {
+      throw new Error("Business accounts must have an initial deposit of 1.000 Euros")
+    }
+    super.open(initialAmount);
+  }
+}
+ 
+class PersonalCheckingAccount extends CheckingAccount {
+  open(initialAmount: number) {
+    if (initialAmount <= 0) {
+      throw new Error("Personal accounts must have an initial deposit of more than zero Euros")
+    }
+    super.open(initialAmount);
+  }
+}
