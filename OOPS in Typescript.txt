@@ -24,6 +24,10 @@ Angular makes use of observables as an interface to handle a variety of common a
 
 
 
+n object is an instance which contains set of key value pairs. The values can be scalar values or functions or even array of other objects
+
+
+
 
 Encapsulation - the capability to store related information, whether data or methods, together in an object.
 
