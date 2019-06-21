@@ -1,0 +1,23 @@
+<label style="margin-right: 130px">P_ID</label>
+<input type="number" [(ngModel)]="id_">
+
+<br><br>
+
+<label style="margin-right: 100px">P_NAME</label>
+<input type="text" [(ngModel)]="name_">
+
+
+<br><br>
+
+<label style="margin-right: 100px">P_COST</label>
+<input type="number" [(ngModel)]="cost_">
+
+
+<br><br>
+
+<button (click)="update({'p_id':id_,'p_name':name_,'p_cost':cost_})">Update</button>
+
+
+<br><br>
+
+<h1>{{updateStatus | json}}</h1>

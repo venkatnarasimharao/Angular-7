@@ -1,0 +1,10 @@
+<label style="margin-right: 130px">P_ID</label>
+<input type="number" [(ngModel)]="id">
+
+<br><br>
+<button (click)="remove({'p_id':id})">Delete</button>
+
+
+<br><br>
+
+<h1>{{deleteStatus | json}}</h1>

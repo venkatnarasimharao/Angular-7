@@ -1,0 +1,29 @@
+<table border="1"
+       cellpadding="10px"
+       cellspacing="10px"
+       align="center"
+       style="font-size: 30px;text-align: center">
+  <thead style="background-color: gray">
+    <tr>
+      <th>SNO</th>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Cost</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let x of records;let i=index">
+      <td>{{i}}</td>
+      <td>{{x.p_id}}</td>
+      <td>{{x.p_name}}</td>
+      <td>{{x.p_cost}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr style="height: 2px;background-color: gray">
+<app-insert [_records]="records"></app-insert>
+<hr style="height: 2px;background-color: gray">
+<app-update [_records]="records"></app-update>
+<hr style="height: 2px;background-color: gray">
+<app-delete [_records]="records"></app-delete>
