@@ -1,0 +1,3 @@
+https://alligator.io/angular/real-time-search-angular-rxjs/
+
+select email from students where email like 'n%';
