@@ -1,0 +1,31 @@
+<html>
+<body ng-app="app">
+    <div ng-controller="myctrl">
+        <input ng-init="message='test'" ng-model="message">
+        <button ng-click="callNotify(message);">NOTIFY</button>
+    </div>
+    <script src="bower_components/angular/angular.min.js"></script>
+    <script>    
+        (function (angular) {
+            'use strict';
+            angular.module('app', []).
+                controller('myctrl', ['$scope', 'fac', function ($scope, fac) {
+                    $scope.callNotify = function (msg) {
+                        fac(msg);
+                    };
+                }]).
+                factory('fac', ['$window', function (win) {
+                    var msgs = [];
+                    return function (msg) {
+                        msgs.push(msg);
+                        if (msgs.length === 1) {
+                            win.alert(msgs);
+                            msgs = [];
+                        }
+                    };
+                }]);
+        })(window.angular);
+    </script>
+</body>
+
+</html>
